@@ -9,3 +9,9 @@ services:
     volumes:
       - './app:/app'
 
+  composer:
+    build:
+      dockerfile: ./docker/composer.Dockerfile
+    # volumes:
+    #   - './app:/app'
+
