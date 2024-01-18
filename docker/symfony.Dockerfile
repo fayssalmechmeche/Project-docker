@@ -12,8 +12,10 @@ RUN apk add php82-mbstring php82-posix php82-intl php82-fpm php82-pdo
 # Dépendances pour Composer
 RUN apk add php82-phar php82-openssl php82-xml php82-dom
 
+# Récupère le script d'installation de Composer
 RUN curl 'https://getcomposer.org/installer' | php -- --install-dir=bin --filename=composer
 
+# Récupère et installe Symfony 
 RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | /bin/sh
 
 RUN apk add symfony-cli
