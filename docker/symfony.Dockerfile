@@ -23,6 +23,8 @@ RUN apk add symfony-cli
 # Vérifie que toutes les dépendances nécessaires sont installées
 RUN symfony check:requirements
 
+# On passe par composer au lieu du CLI de Symfony parce que celui-ci force la création d'un repo git,
+# ce qui n'est pas nécessaire pour un projet de test
 RUN composer create-project symfony/skeleton app
 
 WORKDIR /app
