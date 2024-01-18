@@ -8,8 +8,7 @@ RUN su postgres -
 USER postgres
 
 RUN mkdir /var/lib/postgresql/data 
-RUN chmod 0700 
-
+RUN chmod 0700 /var/lib/postgresql/data 
 RUN initdb -D /var/lib/postgresql/data 
 
 CMD ["postgres", "-D", "/var/lib/postgresql/data"]
