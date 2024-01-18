@@ -8,6 +8,9 @@ services:
       - '8000:8000'
     volumes:
       - './app:/app'
+  postgres:
+    build:
+      dockerfile: ./docker/postgres.Dockerfile
 
   composer:
     build:
