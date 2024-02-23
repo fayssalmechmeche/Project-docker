@@ -18,3 +18,9 @@ services:
     volumes:
       - './app:/app'
 
+  adminer:
+    build:
+      dockerfile: ./docker/adminer.Dockerfile
+    ports:
+      - '8080:8080'
+
