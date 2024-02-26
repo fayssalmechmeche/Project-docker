@@ -4,7 +4,8 @@ FROM alpine:3.19
 RUN apk add curl
 
 
-RUN apk add php82 php82-ctype php82-iconv pcre2 php82-session php82-simplexml php82-tokenizer
+RUN apk add --no-cache curl php82 php82-pgsql php82-pdo_pgsql php82-ctype php82-iconv pcre2 php82-session php82-simplexml php82-tokenizer
+
 
 # Téléchargez Adminer
 RUN mkdir -p /var/www/html && \
