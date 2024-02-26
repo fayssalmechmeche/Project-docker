@@ -1,8 +1,5 @@
 FROM alpine:3.19
 
-ARG POSTGRES_USER
-ARG POSTGRES_PASSWORD
-
 RUN apk update --no-cache 
 RUN apk add postgresql --no-cache 
 RUN mkdir /run/postgresql 
