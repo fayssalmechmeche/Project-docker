@@ -7,7 +7,7 @@ RUN apk add curl git
 RUN apk add php82 php82-ctype php82-iconv pcre2 php82-session php82-simplexml php82-tokenizer
 
 # Extensions supplémentaires pour Symfony (Doctrine, etc.)
-RUN apk add php82-mbstring php82-posix php82-intl php82-fpm php82-pdo
+RUN apk add php82-mbstring php82-posix php82-intl php82-fpm php82-pdo_pgsql
 
 # Dépendances pour Composer
 RUN apk add php82-phar php82-openssl php82-xml php82-dom
