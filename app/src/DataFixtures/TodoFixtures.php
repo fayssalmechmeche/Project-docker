@@ -10,15 +10,14 @@ class TodoFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $todo = new Todo();
-        $todo->setTitle('First todo');
-        $todo->setDone(false);
-        $manager->persist($todo);
+        $faker = \Faker\Factory::create('fr_FR');
 
-        $todo = new Todo();
-        $todo->setTitle('Second todo');
-        $todo->setDone(true);
-        $manager->persist($todo);
+        for ($i = 0; $i < 10; $i++) {
+            $todo = new Todo();
+            $todo->setTitle($faker->sentence(3));
+            $todo->setDone($faker->boolean);
+            $manager->persist($todo);
+        }
 
         $manager->flush();
     }
