@@ -17,6 +17,7 @@ RUN php -r "unlink('composer-setup.php');"
 # Déplace le fichier exécutable Composer (composer.phar) dans le répertoire /usr/local/bin/, ce qui permet de l'exécuter globalement sur le système.
 RUN mv composer.phar /usr/local/bin/composer
 
+# Définir le répertoire de travail
 WORKDIR /app
 
 ENTRYPOINT [ "composer" ]
