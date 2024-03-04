@@ -15,7 +15,7 @@ COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Contient une règle permettant au container Symfony de se connecter
-ADD ./pg_hba.conf /var/lib/postgresql/data
+COPY ./pg_hba.conf /var/lib/postgresql/data
 
 USER postgres
 ENTRYPOINT "docker-entrypoint.sh"
