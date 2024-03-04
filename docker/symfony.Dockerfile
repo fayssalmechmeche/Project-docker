@@ -1,6 +1,6 @@
 FROM alpine:3.19
 
-RUN apk add curl git
+RUN apk add curl
 
 # PHP et extensions obligatoires pour Symfony
 # https://symfony.com/doc/current/setup.html
